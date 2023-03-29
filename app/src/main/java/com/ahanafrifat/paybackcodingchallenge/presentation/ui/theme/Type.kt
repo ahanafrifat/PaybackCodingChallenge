@@ -1,4 +1,4 @@
-package com.ahanafrifat.paybackcodingchallenge.ui.theme
+package com.ahanafrifat.paybackcodingchallenge.presentation.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

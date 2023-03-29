@@ -1,4 +1,4 @@
-package com.ahanafrifat.paybackcodingchallenge
+package com.ahanafrifat.paybackcodingchallenge.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,8 +9,8 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.ahanafrifat.paybackcodingchallenge.ui.theme.PaybackCodingChallengeTheme
+import com.ahanafrifat.paybackcodingchallenge.common.DevicePreviews
+import com.ahanafrifat.paybackcodingchallenge.presentation.ui.theme.PaybackCodingChallengeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +34,8 @@ fun Greeting(name: String) {
     Text(text = "Hello $name!")
 }
 
-@Preview(showBackground = true)
+//@Preview(showBackground = true)
+@DevicePreviews
 @Composable
 fun DefaultPreview() {
     PaybackCodingChallengeTheme {
