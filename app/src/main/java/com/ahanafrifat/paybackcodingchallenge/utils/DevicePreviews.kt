@@ -1,4 +1,4 @@
-package com.ahanafrifat.paybackcodingchallenge.common
+package com.ahanafrifat.paybackcodingchallenge.utils
 
 import android.content.res.Configuration
 import androidx.compose.ui.tooling.preview.Preview

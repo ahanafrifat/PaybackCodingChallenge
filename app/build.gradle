@@ -39,7 +39,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.4.2'
+        kotlinCompilerExtensionVersion '1.4.4'
     }
     packagingOptions {
         resources {
@@ -66,6 +66,7 @@ dependencies {
     //Navigating with Compose
     def nav_version = "2.5.3"
     implementation "androidx.navigation:navigation-compose:$nav_version"
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
 
     // Optional - Integration with ViewModels
     implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1'
@@ -96,12 +97,17 @@ dependencies {
     def room_version = "2.5.1"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    implementation "androidx.room:room-ktx:$room_version"
     // To use Kotlin annotation processing tool (kapt)
     kapt "androidx.room:room-compiler:$room_version"
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
     // optional - Paging 3 Integration
     implementation "androidx.room:room-paging:$room_version"
+
+    // optional - paging Jetpack Compose integration
+    implementation "androidx.paging:paging-compose:1.0.0-alpha18"
 
 //  paging
 //    def paging_version = "3.1.1"
@@ -113,6 +119,10 @@ dependencies {
 
     //coil
     implementation 'io.coil-kt:coil-compose:2.2.2'
+
+    // Swipe to Refresh - Accompanist
+//    def accompanist_version = "0.27.0"
+//    implementation "com.google.accompanist:accompanist-swiperefresh:$accompanist_version"
 
     // DataStore Preferences
     implementation "androidx.datastore:datastore-preferences:1.0.0"

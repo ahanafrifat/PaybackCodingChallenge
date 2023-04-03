@@ -1,4 +1,4 @@
-package com.ahanafrifat.paybackcodingchallenge.common
+package com.ahanafrifat.paybackcodingchallenge.utils
 
 sealed class Resource<T>(val data: T? = null, val message: String? = null) {
 
