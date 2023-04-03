@@ -60,8 +60,16 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun providePaybackRepository(paybackApi: PaybackApi, payBackDatabase: PayBackDatabase, @ApplicationContext context: Context): RemoteDataSource {
-        return RemoteDataSourceImpl(paybackApi = paybackApi, paybackDatabase = payBackDatabase, context = context)
+    fun providePaybackRepository(
+        paybackApi: PaybackApi,
+        payBackDatabase: PayBackDatabase,
+        @ApplicationContext context: Context
+    ): RemoteDataSource {
+        return RemoteDataSourceImpl(
+            paybackApi = paybackApi,
+            paybackDatabase = payBackDatabase,
+            context = context
+        )
     }
 
 }

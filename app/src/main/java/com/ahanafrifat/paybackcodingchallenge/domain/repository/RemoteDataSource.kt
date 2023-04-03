@@ -9,6 +9,4 @@ interface RemoteDataSource {
 
     fun getHits(query: String?): Flow<PagingData<Hit>>
 
-    fun getHitBySearchQuery(query: String?): Flow<PagingData<Hit>>
-
 }

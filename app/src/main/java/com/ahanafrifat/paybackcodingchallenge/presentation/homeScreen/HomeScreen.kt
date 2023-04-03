@@ -56,7 +56,6 @@ fun HomeScreen(
                 ListContent(
                     hits = allHits,
                     onItemClick = { hit ->
-//                        navController.navigate(Screen.DetailScreen.passId(hitId = hit.id))
                         hitId = hit.id
                         user = hit.user
                         isDialogShown = true

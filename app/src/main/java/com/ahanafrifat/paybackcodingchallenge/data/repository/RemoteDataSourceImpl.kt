@@ -39,13 +39,4 @@ class RemoteDataSourceImpl @Inject constructor(
         ).flow
     }
 
-    override fun getHitBySearchQuery(query: String?): Flow<PagingData<Hit>> {
-        return Pager(
-            config = PagingConfig(pageSize = ITEMS_PER_PAGE),
-            pagingSourceFactory = {
-                SearchHitsSource(api = paybackApi, query = query)
-            }
-        ).flow
-    }
-
 }

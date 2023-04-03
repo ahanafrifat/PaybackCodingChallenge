@@ -105,7 +105,7 @@ fun SearchTopBar(
 @ExperimentalComposeUiApi
 @Composable
 @DevicePreviews
-fun searchTopBarPreview() {
+fun SearchTopBarPreview() {
     SearchTopBar(
         text = "",
         onTextChange = {},

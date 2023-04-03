@@ -18,16 +18,11 @@ class HomeViewModel @Inject constructor(
     private val useCases: UseCases
 ) : ViewModel() {
 
-//    val getAllHits = useCases.getAllHitsUseCase("")
-
     private val _searchQuery = mutableStateOf("")
     val searchQuery =_searchQuery
 
     private val _searchHits = MutableStateFlow<PagingData<Hit>>(PagingData.empty())
     val searchHits =_searchHits
-
-    private val _showDialog = MutableSharedFlow<Boolean>()
-    val showDialog = _showDialog.asSharedFlow()
 
     init {
         searchHits("")
@@ -43,19 +38,6 @@ class HomeViewModel @Inject constructor(
                 _searchHits.value = it
             }
         }
-    }
-
-    fun onOpenDialogClicked() {
-//        viewModelScope.
-//        _showDialog.value = true
-    }
-
-    fun onDialogConfirm() {
-//        _showDialog.value = false
-    }
-
-    fun onDialogDismiss() {
-//        _showDialog.value = false
     }
 
 }

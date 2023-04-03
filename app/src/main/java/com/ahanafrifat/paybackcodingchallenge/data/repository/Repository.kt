@@ -16,10 +16,6 @@ class Repository @Inject constructor(
         return remote.getHits(query)
     }
 
-    fun searchHits(query: String): Flow<PagingData<Hit>> {
-        return remote.getHitBySearchQuery(query)
-    }
-
     suspend fun getSelectedHit(hitId: Int): Hit {
         return local.getHitById(hitId)
     }

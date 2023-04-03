@@ -34,12 +34,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-//@Preview(showBackground = true)
-@DevicePreviews
-@Composable
-fun DefaultPreview() {
-    PaybackCodingChallengeTheme {
-//        Greeting("Android")
-    }
-}
