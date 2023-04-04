@@ -99,10 +99,6 @@ fun EmptyContent(
         mutableStateOf(false)
     }
 
-//    PullRefreshIndicator(
-//        refreshing = isRefreshing,
-//        state = rememberPullRefreshState(refreshing = isRefreshing, onRefresh = { hits?.refresh() }))
-
     val pullRefreshState = rememberPullRefreshState(refreshing = isRefreshing, onRefresh = { hits?.refresh() })
 
 

@@ -14,6 +14,7 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import com.ahanafrifat.paybackcodingchallenge.navigation.Screen
 import com.ahanafrifat.paybackcodingchallenge.presentation.homeScreen.components.SearchTopBar
 import com.ahanafrifat.paybackcodingchallenge.presentation.common.ListContent
+import com.ahanafrifat.paybackcodingchallenge.utils.log
 
 @ExperimentalComposeUiApi
 @ExperimentalMaterialApi
@@ -43,7 +44,7 @@ fun HomeScreen(
                 viewModel.updateQuery(query = it)
             },
             onSearchClicked = {
-                Log.d(TAG, it)
+                log(TAG, it)
                 viewModel.searchHits(query = it)
             },
             onCloseClicked = {

@@ -5,11 +5,11 @@ import com.google.gson.annotations.SerializedName
 
 data class ApiResponse(
     @SerializedName("hits")
-    val hits: List<Hit>,
+    val hits: List<Hit> = emptyList(),
     @SerializedName("total")
-    val total: Int,
+    val total: Int? = 0,
     @SerializedName("totalHits")
-    val totalHits: Int,
+    val totalHits: Int? = 0,
     @SerializedName("success")
     val success: Boolean? = null,
     @SerializedName("message")

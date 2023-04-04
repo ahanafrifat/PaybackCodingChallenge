@@ -49,6 +49,7 @@ android {
 }
 
 dependencies {
+    def coroutines_version = "1.6.4"
 
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
@@ -56,12 +57,36 @@ dependencies {
     implementation "androidx.compose.ui:ui:$compose_ui_version"
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
     implementation 'androidx.compose.material:material:1.4.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+
+//    testImplementation 'junit:junit:4.13.2'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+
+    // Local unit tests
+    testImplementation "androidx.test:core:1.5.0"
+    testImplementation "junit:junit:4.13.2"
+    testImplementation "androidx.arch.core:core-testing:2.2.0"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+    testImplementation "com.google.truth:truth:1.1.3"
+    testImplementation "com.squareup.okhttp3:mockwebserver:4.9.1"
+    testImplementation "io.mockk:mockk:1.10.5"
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+
+    // Instrumentation tests
+//    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.44'
+    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.44'
+    androidTestImplementation "junit:junit:4.13.2"
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+    androidTestImplementation "androidx.arch.core:core-testing:2.2.0"
+    androidTestImplementation "com.google.truth:truth:1.1.3"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test:core-ktx:1.5.0'
+    androidTestImplementation "com.squareup.okhttp3:mockwebserver:4.9.1"
+    androidTestImplementation "io.mockk:mockk-android:1.10.5"
+    androidTestImplementation 'androidx.test:runner:1.5.2'
 
     //Navigating with Compose
     def nav_version = "2.5.3"
@@ -71,9 +96,8 @@ dependencies {
     // Optional - Integration with ViewModels
     implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1'
 
-    def coroutines_version = "1.6.4"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
-    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+//    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
 
     //Hilt
     implementation "com.google.dagger:hilt-android:2.44"
@@ -120,12 +144,6 @@ dependencies {
     //coil
     implementation 'io.coil-kt:coil-compose:2.2.2'
 
-    // Swipe to Refresh - Accompanist
-//    def accompanist_version = "0.27.0"
-//    implementation "com.google.accompanist:accompanist-swiperefresh:$accompanist_version"
-
-    // DataStore Preferences
-    implementation "androidx.datastore:datastore-preferences:1.0.0"
 }
 
 kapt {

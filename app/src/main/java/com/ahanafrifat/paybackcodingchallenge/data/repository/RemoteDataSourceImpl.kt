@@ -7,9 +7,7 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.ahanafrifat.paybackcodingchallenge.data.local.PayBackDatabase
 import com.ahanafrifat.paybackcodingchallenge.data.paging_source.HitRemoteMediator
-import com.ahanafrifat.paybackcodingchallenge.data.paging_source.SearchHitsSource
 import com.ahanafrifat.paybackcodingchallenge.data.remote.PaybackApi
-import com.ahanafrifat.paybackcodingchallenge.domain.model.ApiResponse
 import com.ahanafrifat.paybackcodingchallenge.domain.model.Hit
 import com.ahanafrifat.paybackcodingchallenge.domain.repository.RemoteDataSource
 import com.ahanafrifat.paybackcodingchallenge.utils.Constants.ITEMS_PER_PAGE
